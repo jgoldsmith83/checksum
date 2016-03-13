@@ -10,9 +10,11 @@ a3417ca5d562073a7f43c9c1aafde9c218a179c8  checksum
 <u><b>Arguments</b></u>
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;<i>File</i>
+    <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A file downloaded from the internet, transferred from another machine, or newly created.
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;<i>Sum</i>
+    <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A sha1 sum provided at the time of the download.
 
 <u><b>Installation</b></u>
