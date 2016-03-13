@@ -10,8 +10,7 @@ a3417ca5d562073a7f43c9c1aafde9c218a179c8  checksum
     <br>
     <i>File</i>
            A file downloaded from the internet, transferred from another machine, or newly created.
-    <br>  
-    <br>
+    
     <i>Sum</i>
            A sha1 sum provided at the time of the download.
 
