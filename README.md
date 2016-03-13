@@ -21,4 +21,4 @@ a3417ca5d562073a7f43c9c1aafde9c218a179c8  checksum
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;<i>Checksum</i> can either be moved to /usr/local/bin or /usr/share/bin for use from anywhere in the file system.
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Be sure to run "chmod a+x checksum" to ensure is it executable.
+&nbsp;&nbsp;&nbsp;&nbsp;Be sure to run "chmod a+x checksum" to ensure it is executable.
