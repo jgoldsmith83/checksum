@@ -3,6 +3,7 @@ a3417ca5d562073a7f43c9c1aafde9c218a179c8  checksum
 <h2>Checksum</h2>
 
 <b>Synopsis</b>
+    <br>
     Checksum is a command line utility which takes a downloaded file and a provided sha1 sum as arguments. It will calculate a sha1 sum on the provided file, compaere the calculated sum to the provided sum and produce human readable output based on the comparison.
 
 
