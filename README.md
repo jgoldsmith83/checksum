@@ -23,6 +23,6 @@
 
 <u><b>Installation</b></u>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;<i>Checksum</i> can either be moved to /usr/local/bin or /usr/share/bin for use from anywhere in the file system.
+&nbsp;&nbsp;&nbsp;&nbsp;First run "chmod a+x checksum" to make it executable.
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Be sure to run "chmod a+x checksum" to ensure it is executable.
+&nbsp;&nbsp;&nbsp;&nbsp;<i>Checksum</i> should be moved to /usr/bin for use from anywhere in the file system.
