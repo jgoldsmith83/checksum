@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Mon, 14 Mar 2016 02:30:52 -0400
+Source: checksum
+Binary: checksum
+Architecture: source all
+Version: 0.1-1
+Distribution: unstable
+Urgency: low
+Maintainer: Justin <justin@unknown>
+Changed-By: Justin <justin@unknown>
+Description:
+ checksum   - <insert up to 60 chars description>
+Changes:
+ checksum (0.1-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ 33972b73af646a605db0fb952dd4de3593ea9fd2 539 checksum_0.1-1.dsc
+ 85b0375a6742c8e39dd35fb1da32ec3f04c36786 2833 checksum_0.1-1.tar.gz
+ 67a9e11e9ab8b0abfe8c9512bde5dcb0d2cbe16e 2584 checksum_0.1-1_all.deb
+Checksums-Sha256:
+ d9472c35c21a00f2599a6efc40b9e9df466e8c0b50e5cd97e7867ed9d8c31e94 539 checksum_0.1-1.dsc
+ 4d8b9cd413bf683945d668be7eef6d586bb55eba55a5b5db728e0265a1b0f042 2833 checksum_0.1-1.tar.gz
+ d6feb0f2f567ef1459f27e12b30ea91b9077cd27b2b12f947726ca8925bc6aa9 2584 checksum_0.1-1_all.deb
+Files:
+ 18964945f80e8a63f0936fced78f94f1 539 unknown optional checksum_0.1-1.dsc
+ 76a8f57582f1bab0a625473008a25bc9 2833 unknown optional checksum_0.1-1.tar.gz
+ 729d8965f4149fe4dac0aaf4ede92a28 2584 unknown optional checksum_0.1-1_all.deb

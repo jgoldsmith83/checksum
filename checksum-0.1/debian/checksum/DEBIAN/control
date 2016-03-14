@@ -1,0 +1,10 @@
+Package: checksum
+Version: 0.1-1
+Architecture: all
+Maintainer: Justin <justin@justingoldsmith.net>
+Installed-Size: 13
+Section: unknown
+Priority: optional
+Homepage: https://github.com/jgoldsmith83/checksum
+Description: A lightweight command line utility for checking sha1 sums
+ <insert long description, indented with spaces>
