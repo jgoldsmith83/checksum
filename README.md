@@ -21,7 +21,7 @@
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A sha1 sum provided at the time of the download OR A sha1 file provided with the download.
     <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Checksum will determine if the sum is provided as a file or a c&p sum
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Checksum will determine if the sum is provided as a file or string.
 
 <u><b>Installation</b></u>
 <br>
