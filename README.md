@@ -1,10 +1,14 @@
-a3417ca5d562073a7f43c9c1aafde9c218a179c8  checksum
+246455668b30feec458cc4fc7b9a63902e0c5fbd  checksum
 
 <h2>Checksum</h2>
 
 <b>Synopsis</b>
     <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Checksum is a lightweight command line utility which takes a downloaded file and a provided sha1 sum as arguments. It will calculate a sha1 sum on the provided file, compare the calculated sum to the provided sum, and produce a human readable output based on the comparison.
+&nbsp;&nbsp;&nbsp;&nbsp;Checksum is a lightweight command line utility which takes a downloaded file and a provided sha1 sum as arguments. It will calculate a sha1 sum on the provided file, compare the calculated sum to the provided sum, and produce a human readable result based on the comparison.
+
+<u><b>Usage</b></u>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;checksum [<i>file</i>] [<i>sum</i>]
 
 
 <u><b>Arguments</b></u>
@@ -19,6 +23,6 @@ a3417ca5d562073a7f43c9c1aafde9c218a179c8  checksum
 
 <u><b>Installation</b></u>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;<i>Checksum</i> can either be moved to /usr/local/bin or /usr/share/bin for use from anywhere in the file system.
+&nbsp;&nbsp;&nbsp;&nbsp;First run "chmod a+x checksum" to make it executable.
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Be sure to run "chmod a+x checksum" to ensure it is executable.
+&nbsp;&nbsp;&nbsp;&nbsp;<i>Checksum</i> should be moved to /usr/bin for use from anywhere in the file system.
