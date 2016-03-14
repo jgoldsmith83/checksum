@@ -29,26 +29,6 @@ if [[ -f "$2" ]]; then
 	calcSumIn=`cat $2`
 	calcArray=($calcSumIn)
 	calcSum=${calcArray[0]}
-
-	if [[ "$inFileSum" == "$calcSum" ]]; then
-		echo ""
-		echo ""
-		echo -e "\e[1;34m  Provided Sum:\e[0m" $calcSum
-		echo -e "\e[1;34mCalculated Sum:\e[0m" $inFileSum
-		echo ""
-		echo -e "\e[1;32mHashes match. Download Successful.\e[0m"
-		echo ""
-		echo ""
-	else
-		echo ""
-		echo ""
-		echo -e "\e[1;34m  Provided Sum:\e[0m" $calcSum
-		echo -e "\e[1;34mCalculated Sum:\e[0m" $inFileSum
-		echo ""
-		echo -e "\e[1;31mHashes do not match. Download corrupted.\e[0m"
-		echo ""
-		echo ""
-	fi
 else
 	sha1out=`sha1sum $1`
 	sumArray=($sha1out)
