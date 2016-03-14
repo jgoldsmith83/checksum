@@ -6,6 +6,10 @@
     <br>
 &nbsp;&nbsp;&nbsp;&nbsp;Checksum is a lightweight command line utility which takes a downloaded file and a provided sha1 sum as arguments. It will calculate a sha1 sum on the provided file, compare the calculated sum to the provided sum, and produce a human readable result based on the comparison.
 
+<u><b>Usage</b></u>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;checksum [<i>file</i>] [<i>sum</i>]
+
 
 <u><b>Arguments</b></u>
     <br>
