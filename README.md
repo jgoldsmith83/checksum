@@ -19,7 +19,9 @@
     <br>
     &nbsp;&nbsp;&nbsp;&nbsp;<i>Sum</i>
     <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A sha1 sum provided at the time of the download.
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A sha1 sum provided at the time of the download OR A sha1 file provided with the download.
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Checksum will determine if the sum is provided as a file or string.
 
 <u><b>Installation</b></u>
 <br>
