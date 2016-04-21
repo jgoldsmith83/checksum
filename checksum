@@ -29,7 +29,7 @@
 
 ## - Tests and Conditions - ##
 #
-#   Test if user is root - true: exit with error code 1, false: continue
+#   Test if user is root - true: exit with error code 1 - checksum run without arguments, false: continue
 if [[ $# -eq 0 ]]; then
 	echo ""
     echo "No arguments provided. Nothing to do here..."
@@ -83,7 +83,7 @@ if [[ "$inFileSum" == "$2" ]]; then
 	echo -e "\e[1;32mHashes match. Download Successful.\e[0m"
 	echo ""
 	echo ""
-	
+
 #     False: Display failure message
 else
 	echo ""
