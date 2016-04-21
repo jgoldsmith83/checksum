@@ -1,5 +1,35 @@
 #!/bin/bash
 
+## - README - ##
+#
+#  Checksum v1.2
+#  
+#  Synopsis 
+#   Checksum is a lightweight command line utility which takes a downloaded 
+#   file and a provided sha1 sum as arguments. It will calculate a sha1 sum 
+#   on the provided file, compare the calculated sum to the provided sum, and 
+#   produce a human readable result based on the comparison.
+#  
+#  Usage 
+#   checksum [file] [sum]
+#
+#  Arguments 
+#   File 
+#       A file downloaded from the internet, transferred from another machine, or newly created. 
+#   Sum 
+#       A sha1 sum provided at the time of the download OR A sha1 file provided with the download. 
+#       *Checksum will determine if the sum is provided as a file or string.
+#
+#  Installation 
+#   First run "chmod a+x checksum" to make it executable. 
+#   Checksum should be moved to /usr/bin for use from anywhere in the file system.
+#
+## - END README - ##
+
+
+## - Tests and Conditions - ##
+#
+#   Test if user is root - true: exit with error code 1, false: continue
 if [[ $# -eq 0 ]]; then
 	echo ""
     echo "No arguments provided. Nothing to do here..."
@@ -7,6 +37,7 @@ if [[ $# -eq 0 ]]; then
 	exit 1
 fi
 
+#   Test if [file] exists - true: continue, false: exit with error code 1 - file does not exist on disk (case sensitive)
 if [[ ! -e "$1" ]]; then
 	echo ""
 	echo "Error: provided file does not exist."
@@ -14,64 +45,55 @@ if [[ ! -e "$1" ]]; then
 	exit 1
 fi
 
+#   Test if user provided a sum - true: continue, false: exit with error code 2 - user did not provide a sum
 if [[ -z "$2" ]]; then
 	echo ""
 	echo "Error: no sha1 checksum provided."
 	echo ""
 	exit 2
 fi
+#
+## - End Test and Conditions - ##
 
-if [[ -f "$2" ]]; then
-	sha1out=`sha1sum $1`
-	sumArray=($sha1out)
-	inFileSum=${sumArray[0]}
 
-	calcSumIn=`cat $2`
-	calcArray=($calcSumIn)
-	calcSum=${calcArray[0]}
 
-	if [[ "$inFileSum" == "$calcSum" ]]; then
-		echo ""
-		echo ""
-		echo -e "\e[1;34m  Provided Sum:\e[0m" $calcSum
-		echo -e "\e[1;34mCalculated Sum:\e[0m" $inFileSum
-		echo ""
-		echo -e "\e[1;32mHashes match. Download Successful.\e[0m"
-		echo ""
-		echo ""
-	else
-		echo ""
-		echo ""
-		echo -e "\e[1;34m  Provided Sum:\e[0m" $calcSum
-		echo -e "\e[1;34mCalculated Sum:\e[0m" $inFileSum
-		echo ""
-		echo -e "\e[1;31mHashes do not match. Download corrupted.\e[0m"
-		echo ""
-		echo ""
-	fi
+## - Variables - ##
+#   
+#   sha1out - the output of running 'sha1sum' on the downloaded file
+#   sumArray - storing sha1out in an array by itself allows us to access it as a value
+#   inFileSum - the value stored at sumArray[0]
+#
+sha1out=`sha1sum $1`
+sumArray=($sha1out)
+inFileSum=${sumArray[0]}
+#
+## - End Variables - ##
+
+## - Execution - ##
+#
+#   Test if calculated hash matches provided sum
+#
+#     True: Display success message
+if [[ "$inFileSum" == "$2" ]]; then
+	echo ""
+	echo ""
+	echo -e "\e[1;34m  Provided Sum:\e[0m" $2
+	echo -e "\e[1;34mCalculated Sum:\e[0m" $inFileSum
+	echo ""
+	echo -e "\e[1;32mHashes match. Download Successful.\e[0m"
+	echo ""
+	echo ""
+	
+#     False: Display failure message
 else
-	sha1out=`sha1sum $1`
-	sumArray=($sha1out)
-	inFileSum=${sumArray[0]}
-
-	if [[ "$inFileSum" == "$2" ]]; then
-		echo ""
-		echo ""
-		echo -e "\e[1;34m  Provided Sum:\e[0m" $2
-		echo -e "\e[1;34mCalculated Sum:\e[0m" $inFileSum
-		echo ""
-		echo -e "\e[1;32mHashes match. Download Successful.\e[0m"
-		echo ""
-		echo ""
-	else
-		echo ""
-		echo ""
-		echo -e "\e[1;34m  Provided Sum:\e[0m" $2
-		echo -e "\e[1;34mCalculated Sum:\e[0m" $inFileSum
-		echo ""
-		echo -e "\e[1;31mHashes do not match. Download corrupted.\e[0m"
-		echo ""
-		echo ""
-	fi
+	echo ""
+	echo ""
+	echo -e "\e[1;34m  Provided Sum:\e[0m" $2
+	echo -e "\e[1;34mCalculated Sum:\e[0m" $inFileSum
+	echo ""
+	echo -e "\e[1;31mHashes do not match. Download corrupted.\e[0m"
+	echo ""
+	echo ""
 fi
-
+#
+## - End Execution - ##
